@@ -1,5 +1,4 @@
 //ジェネティクス
-//
 //ジェネリック型　他の特定の型と結合された型です
 //ex) Array<string>
 const names: Array<string> = []; //string[]
