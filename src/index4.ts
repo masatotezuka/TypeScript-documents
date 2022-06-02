@@ -58,7 +58,6 @@ console.log(extractAndConvert({ name: "Max" }, "name"));
 //クラス全体をどれかの型に統一したいときに使う
 class DataStorage<T extends string | number | boolean> {
   private data: T[] = [];
-
   addItem(item: T) {
     this.data.push(item);
   }

@@ -28,7 +28,7 @@ function addAndHandle(n1: number, n2: number, cd: (num: number) => void) {
 
 addAndHandle(3, 5, (result) => {
   console.log(result);
-  return result;
+  // return result;
   //値を返していようが返していまいが特に影響がない
   //戻り値には厳密でない
 });

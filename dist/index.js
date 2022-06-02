@@ -18,7 +18,9 @@ const number1 = 5;
 const number2 = 3;
 const printResult = true;
 const resultPhrase = "Result is ";
-const result = add(number1, number2, printResult, resultPhrase);
+let result;
+console.log(result);
+result = add(number1, number2, printResult, resultPhrase);
 console.log(result);
 const person = {
     name: "taro",
@@ -27,6 +29,8 @@ const person = {
 const capitals = {
     Japan: "Tokyo",
     Korea: "Seoul",
+    1: 1,
+    2: "test",
 };
 capitals.China = "Beijing";
 console.log(capitals);

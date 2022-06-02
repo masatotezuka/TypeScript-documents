@@ -1,6 +1,11 @@
 //型の利用
 //パラメータに型を指定する
-function add(n1: number, n2: number, showResult: boolean, phrase: string) {
+function add(
+  n1: number,
+  n2: number,
+  showResult: boolean,
+  phrase: string
+): NumberOrString {
   const result = n1 + n2;
   if (showResult) {
     return phrase + result;
@@ -22,8 +27,12 @@ const number1: number = 5;
 const number2 = 3;
 const printResult = true;
 const resultPhrase = "Result is ";
+type NumberOrString = number | string;
 
-const result = add(number1, number2, printResult, resultPhrase);
+let result;
+console.log(result);
+
+result = add(number1, number2, printResult, resultPhrase);
 console.log(result);
 
 //Object型の型付け
@@ -41,10 +50,12 @@ const person: {
 //[key:T]:Uのように定義する
 //keyはstringかnumberのみ
 const capitals: {
-  [countryName: string]: string;
+  [countryName: NumberOrString]: NumberOrString;
 } = {
   Japan: "Tokyo",
   Korea: "Seoul",
+  1: 1,
+  2: "test",
 };
 
 capitals.China = "Beijing";

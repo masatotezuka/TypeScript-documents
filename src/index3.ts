@@ -1,16 +1,16 @@
 //Interaction型　type = A & B
 //Union型　type = A | B
 type Admin = {
-  name: string;
-  privileges: string[];
+  name1: string;
+  privileges?: string[];
 };
 
 type Employee = {
   name: string;
-  startDate: Date;
+  startDate?: Date;
 };
 
-type ElevatedEmployee = Admin & Employee;
+type ElevatedEmployee = Admin | Employee;
 
 type StringAndNumber = string | number;
 type NumericAndBoolean = number | boolean;
@@ -29,23 +29,24 @@ function add4(a: StringAndNumber, b: StringAndNumber) {
 
 //プロパティ in object
 type UnknownEmployee = Employee | Admin;
-function printEmployeeInformation(emp: UnknownEmployee) {
-  console.log(emp.name);
-  if ("privileges" in emp) {
-    console.log("Privileges: " + emp.privileges);
-  }
-  if ("startDate" in emp) {
-    console.log("Start Date:" + emp.startDate);
-  }
-}
+// function printEmployeeInformation(emp: UnknownEmployee) {
+//   console.log(emp.name);
+//   if ("privileges" in emp) {
+//     console.log("Privileges: " + emp.privileges);
+//   }
+//   if ("startDate" in emp) {
+//     console.log("Start Date:" + emp.startDate);
+//   }
+// }
 
 const e1: ElevatedEmployee = {
   name: "max",
+  name1: "test",
   privileges: ["create-server"],
   startDate: new Date(),
 };
 
-printEmployeeInformation(e1);
+// printEmployeeInformation(e1);
 
 //instanceofでタイプガード
 //interfaceはJsにはコンパイルできないから使用できない

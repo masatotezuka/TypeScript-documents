@@ -5,21 +5,12 @@ function add4(a, b) {
     }
     return a + b;
 }
-function printEmployeeInformation(emp) {
-    console.log(emp.name);
-    if ("privileges" in emp) {
-        console.log("Privileges: " + emp.privileges);
-    }
-    if ("startDate" in emp) {
-        console.log("Start Date:" + emp.startDate);
-    }
-}
 const e1 = {
     name: "max",
+    name1: "test",
     privileges: ["create-server"],
     startDate: new Date(),
 };
-printEmployeeInformation(e1);
 class Car {
     drive() {
         console.log("車を運転中...");

@@ -15,7 +15,6 @@ function addAndHandle(n1, n2, cd) {
 }
 addAndHandle(3, 5, (result) => {
     console.log(result);
-    return result;
 });
 let userInput;
 let userName;
